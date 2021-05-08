@@ -17,6 +17,9 @@
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   },
@@ -24,6 +27,9 @@
     "@typescript-eslint/eslint-plugin": "I believe this contains the actual typescript eslint rules.  This is installed alongside @typescript-eslint/parser and must have the same version number",
     "@typescript-eslint/parser": "allows eslint to parse typescript code",
     "eslint": "allows our code to be linted against a particular set of code rules",
+    "eslint-config-prettier": "(only) turns off all eslint rules that interfere with prettier rules",
+    "eslint-plugin-prettier": "converts prettier rules into eslint rules",
+    "prettier": "opinionated code formatting rules for eslint",
     "ts-node": "allows nodejs to run typescript files",
     "typescript": "a strongly-typed superset of javascript"
   }
