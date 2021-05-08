@@ -12,5 +12,6 @@
     "plugin:prettier/recommended",  //  prettier formatting rules
   ],
   "rules": {
+    "no-console": "error"
   }
 }

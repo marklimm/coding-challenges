@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
-    "start": "ts-node --transpile-only script.ts ",
+    "start": "ts-node --transpile-only challenges/script.ts ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "scriptsComments": {
@@ -13,12 +13,26 @@
   },
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "**/*.{ts}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": ""
+    }
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
@@ -29,6 +43,8 @@
     "eslint": "allows our code to be linted against a particular set of code rules",
     "eslint-config-prettier": "(only) turns off all eslint rules that interfere with prettier rules",
     "eslint-plugin-prettier": "converts prettier rules into eslint rules",
+    "husky": "allows us to run a command (to lint the code) immediately before a `git commit` is made",
+    "lint-staged": "allows us to only lint files that are currently staged (that are in the staging area by running `git add`)",
     "prettier": "opinionated code formatting rules for eslint",
     "ts-node": "allows nodejs to run typescript files",
     "typescript": "a strongly-typed superset of javascript"
