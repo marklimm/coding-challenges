@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [  //  my understanding is that this is where we bring in plugins ...
+    "@typescript-eslint"  //  bring in the typescript eslint rules
+  ],
+  "extends": [  //  ... and then within `extends` and `rules` we use the plugins that we brought in
+    "eslint:recommended",  //  recommended eslint rules
+    "plugin:@typescript-eslint/eslint-recommended",  //  turn off all eslint:recommended rules that interfere with @typescript-eslint/recommended
+    "plugin:@typescript-eslint/recommended"  //  turn on @typescript-eslint/recommended rules
+  ],
+  "rules": {
+    "no-console": "warn"  //  show a warning if there are console.log() statements
+  }
+}

@@ -14,11 +14,11 @@ const isVowel = (letter = '') => {
 }
 
 /**
- * function that takes in a string and reverses all the vowels in the string.
+ * a recursive function that takes in a string and reverses all the vowels within the string.
  * @param theString 
  * @returns 
  */
-const reverseVowels = (theString = '') => {
+const reverseVowels = (theString = '')  => {
 
   // console.log('reverseVowels() : theString', theString)
 
@@ -56,7 +56,7 @@ const reverseVowels = (theString = '') => {
 }
 
 
-export const testSwapVowels = () => {
+export const testSwapVowels = () : void => {
 
   console.log('reverseVowels(\'I love burritos\')', reverseVowels('I love burritos'))
   console.log('reverseVowels(\'spicy food is the best!\')', reverseVowels('spicy food is the best!'))
