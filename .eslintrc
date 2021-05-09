@@ -12,6 +12,6 @@
     "plugin:prettier/recommended",  //  prettier formatting rules
   ],
   "rules": {
-    "no-console": "error"
+    "no-console": "off" //  whether to treat console.log() as an error
   }
 }
